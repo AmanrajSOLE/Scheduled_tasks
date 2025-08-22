@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 40px;
-  gap: 15px; 
+  gap: 40px; 
 }
 
 .post-form textarea,
@@ -114,4 +114,57 @@
   color: #222;
   line-height: 1.4;
 }
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column; 
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 2px solid #e0e0e0; 
+    padding: 20px 15px;
+  }
+
+  .post-form {
+    padding: 0 20px;
+  }
+
+  .date-input {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .right {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-heading,
+  .right-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .post-form textarea,
+  .post-form input {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .post-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .post-card {
+    padding: 12px 15px;
+  }
+
+  .post-card p {
+    font-size: 0.95rem;
+  }
+}
+
 
