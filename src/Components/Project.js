@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Project.css";
 
 function MainComponent() {
   const [posts, setPosts] = useState([]);
@@ -33,27 +34,32 @@ function MainComponent() {
   return (
     <div className="app">
       <div className="left">
-        <h2>What's on your mind</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
+        <h2 className="left-heading">What's on your mind</h2>
+        <form onSubmit={handleSubmit} className="post-form">
+          <textarea
             name="text"
             value={form.text}
             onChange={handleChange}
             placeholder="Enter post text"
+            rows="4"
           />
+          
+          <div className="date-input">
+          <label for="date">Post By</label>
           <input
             type="datetime-local"
             name="date"
+            id="date"
             value={form.date}
             onChange={handleChange}
           />
+          </div>
           <button type="submit">Submit</button>
         </form>
       </div>
 
       <div className="right">
-        <h2>Timeline</h2>
+        <h2 className="right-heading">Timeline</h2>
         {posts.length === 0 && <p>No posts yet...</p>}
         <div className="posts">
           {posts.map((p) => (

@@ -1,0 +1,117 @@
+.app {
+  display: flex;
+  border: none;
+}
+
+.left {
+  flex: 1;
+  padding: 30px 20px;
+  border-right: 2px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.left-heading,
+.right-heading {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  gap: 15px; 
+}
+
+.post-form textarea,
+.post-form input {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.date-input {
+    align-self: center;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.post-form textarea:focus,
+.post-form input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+}
+
+.post-form button {
+  padding: 12px;
+  background: linear-gradient(135deg, #4a90e2, #0070f3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3);
+}
+
+.post-form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+  
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  padding: 10px 0;
+}
+
+.post-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.post-card small {
+  display: block;
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.post-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+}
+
